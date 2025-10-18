@@ -153,8 +153,8 @@ function parseNumberFromString(value) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelepipedDiagonal(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getParallelepipedDiagonal(a, b, c) {
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
@@ -176,7 +176,7 @@ function getParallelepipedDiagonal(/* a, b, c */) {
  */
 function roundToPowerOfTen(num, pow) {
   if (pow === 0) return num;
-  return 0;
+  return Math.round(num / 10 ** pow) * 10 ** pow;
 }
 
 /**
